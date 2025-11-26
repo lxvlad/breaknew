@@ -1,0 +1,52 @@
+﻿<Window x:Class="BreakFree.Presentation.Views.JournalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BreakFree – Журнал зривів"
+        Height="550" Width="500"
+        Background="White"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <!-- Заголовок -->
+        <TextBlock Text="Журнал зривів"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,25"/>
+
+        <!-- Таблиця для зривів -->
+        <DataGrid x:Name="JournalDataGrid"
+                  Margin="0,70,0,100"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="100"/>
+                <DataGridTextColumn Header="Причина" Binding="{Binding Reason}" Width="150"/>
+                <DataGridTextColumn Header="Коротка нотатка" Binding="{Binding Note}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Кнопки -->
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,30">
+            <Button Content="Додати зрив"
+                    Width="150" Height="40"
+                    Background="#999"
+                    Foreground="White"
+                    FontSize="15"
+                    FontWeight="SemiBold"
+                    Margin="0,0,40,0"
+                    Click="AddRelapse_Click"/>
+            <Button Content="Закрити"
+                    Width="150" Height="40"
+                    Background="#555"
+                    Foreground="White"
+                    FontSize="15"
+                    FontWeight="SemiBold"
+                    Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

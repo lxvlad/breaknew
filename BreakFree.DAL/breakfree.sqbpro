@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="breakfree.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2484"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="DailyStatuses" custom_title="0" dock_id="1" table="4,13:mainDailyStatuses"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000012200ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">
+
+----TABLE: Users----
+CREATE TABLE Users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+
+----TABLE: SOSActions----
+CREATE TABLE SOSActions (
+    action_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    text TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+----TABLE: UserSOSLogs----
+CREATE TABLE UserSOSLogs (
+    log_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    action_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    dateTime DATETIME NOT NULL,
+    worked BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (action_id) REFERENCES SOSActions(action_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+----TABLE: Habits----
+CREATE TABLE Habits (
+    habit_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    habit_name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    daily_goal INTEGER NOT NULL,
+    motivation TEXT,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+----TABLE: DailyStatuses----
+CREATE TABLE DailyStatuses (
+    status_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    habit_id INTEGER NOT NULL,
+    dateTime DATETIME NOT NULL,
+    trigger TEXT,
+    note TEXT,
+    craving_level INTEGER CHECK (craving_level BETWEEN 0 AND 10),
+    FOREIGN KEY (habit_id) REFERENCES Habits(habit_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+----TABLE: Quotes----
+CREATE TABLE Quotes (
+    quote_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    text TEXT NOT NULL
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

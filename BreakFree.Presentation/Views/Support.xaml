@@ -1,0 +1,74 @@
+﻿<Window x:Class="BreakFree.Presentation.Views.Support"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BreakFree – Звернутись у підтримку"
+        Height="400" Width="500"
+        Background="White"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="40">
+
+        <!-- ===== Заголовок ===== -->
+        <TextBlock Text="Звернутись у підтримку"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,40"/>
+
+        <!-- ===== Форма ===== -->
+        <Grid VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Тема:" 
+                       Grid.Row="0" Grid.Column="0"
+                       FontSize="16" FontWeight="SemiBold"
+                       VerticalAlignment="Center"
+                       Margin="0,0,10,15"/>
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Height="30" BorderBrush="#ccc"
+                     Margin="0,0,0,15"/>
+
+            <TextBlock Text="Повідомлення:" 
+                       Grid.Row="1" Grid.Column="0"
+                       FontSize="16" FontWeight="SemiBold"
+                       VerticalAlignment="Top"
+                       Margin="0,0,10,0"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Height="120" 
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     BorderBrush="#ccc"/>
+        </Grid>
+
+        <!-- ===== Кнопки ===== -->
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,10">
+            <Button Content="Надіслати"
+                    Width="160" Height="40"
+                    Background="#FF5C4D"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Margin="0,0,90,0"
+                    Click="SendButton_Click"/>
+            <Button Content="Скасувати"
+                    Width="160" Height="40"
+                    Background="#999"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Click="CancelButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
+
