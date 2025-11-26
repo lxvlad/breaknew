@@ -19,9 +19,10 @@ namespace BreakFree.DAL
         public DbSet<UserSOSLog> UserSOSLogs { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=breakfree.db");
+            var dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), "breakfree.db");
+            optionsBuilder.UseSqlite($"Data Source={dbPath}");
         }
     }
 }

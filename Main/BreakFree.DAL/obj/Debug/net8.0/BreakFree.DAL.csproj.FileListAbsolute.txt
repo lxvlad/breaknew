@@ -26,3 +26,6 @@ C:\Users\User\Desktop\BreakFree\BreakFree1\BreakFree\BreakFree.DAL\obj\Debug\net
 C:\Users\User\Desktop\BreakFree\BreakFree1\BreakFree\BreakFree.DAL\obj\Debug\net8.0\BreakFree.DAL.pdb
 C:\Users\User\Desktop\BreakFree\BreakFree1\BreakFree\BreakFree.DAL\obj\Debug\net8.0\BreakFree.DAL.genruntimeconfig.cache
 C:\Users\User\Desktop\BreakFree\BreakFree1\BreakFree\BreakFree.DAL\obj\Debug\net8.0\ref\BreakFree.DAL.dll
+Z:\Desktop\BreakFreeHola\Main\BreakFree.DAL\obj\Debug\net8.0\BreakFree.DAL.dll
+Z:\Desktop\BreakFreeHola\Main\BreakFree.DAL\obj\Debug\net8.0\refint\BreakFree.DAL.dll
+Z:\Desktop\BreakFreeHola\Main\BreakFree.DAL\obj\Debug\net8.0\BreakFree.DAL.pdb
