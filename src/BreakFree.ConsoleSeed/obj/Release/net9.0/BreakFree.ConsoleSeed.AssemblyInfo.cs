@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BreakFree.ConsoleSeed")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27ed90f4185affa3774c4c14be1de11bbc1cfc1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c815196af942e525886076d6d21f09d41d781a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BreakFree.ConsoleSeed")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BreakFree.ConsoleSeed")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

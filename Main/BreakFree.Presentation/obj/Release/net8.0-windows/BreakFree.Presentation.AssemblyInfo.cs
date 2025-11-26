@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BreakFree.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c815196af942e525886076d6d21f09d41d781a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BreakFree.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BreakFree.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
