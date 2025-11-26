@@ -1,0 +1,55 @@
+﻿<Window x:Class="BreakFree.Presentation.Views.CalendarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BreakFree – Прогрес за місяць"
+        Height="530" Width="630"
+        Background="White"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="40">
+        <TextBlock Text="Прогрес за місяць"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+        <Grid x:Name="CalendarGrid" VerticalAlignment="Center" Margin="0,50,0,100" Width="500" Height="220">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,40">
+            <Button Content="Відкрити журнал"
+                    Width="150" Height="40"
+                    Background="#999"
+                    Foreground="White"
+                    FontSize="15"
+                    FontWeight="SemiBold"
+                    Margin="0,0,40,0" Click="Button_Click_1"/>
+            
+            <Button Content="Закрити"
+                    Width="120" Height="40"
+                    Background="#999"
+                    Foreground="White"
+                    FontSize="15"
+                    FontWeight="SemiBold"
+                    Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+# Build results
+bin/
+obj/
+
+# VS cache/options
+.vs/
+*.user
+*.suo
+
+# .NET
+*.lock.json
+project.lock.json
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+
+# Others
+*.DS_Store
+Thumbs.db
+
+*BreakFree.BLL.csproj
+*BreakFree.DAL.csproj
+*BreakFree.Presentation.csproj
+
+*breakfree.db
+*breakfree.sqbpro

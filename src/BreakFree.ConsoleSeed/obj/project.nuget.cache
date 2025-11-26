@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "DnWXIdolfwo=",
+  "success": true,
+  "projectFilePath": "Z:\\Desktop\\software-engineering-2025-breakfree\\src\\BreakFree.ConsoleSeed\\BreakFree.ConsoleSeed.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vlish21\\.nuget\\packages\\bogus\\35.6.4\\bogus.35.6.4.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\microsoft.data.sqlite\\8.0.6\\microsoft.data.sqlite.8.0.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.6\\microsoft.data.sqlite.core.8.0.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\vlish21\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

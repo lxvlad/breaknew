@@ -1,0 +1,67 @@
+<Window x:Class="BreakFree.Presentation.Views.AboutView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BreakFree - Про застосунок" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="PrimaryButton" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#E57373"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Про BreakFree" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="20" Foreground="#333"/>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Версія:" FontWeight="SemiBold" Margin="0,10,20,10"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="v1.0.0" Margin="0,10"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Дата оновлення:" FontWeight="SemiBold" Margin="0,10,20,10"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="01/10/2025" Margin="0,10"/>
+                
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Технології:" FontWeight="SemiBold" Margin="0,10,20,10" VerticalAlignment="Top"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Margin="0,10" TextWrapping="Wrap">
+                    <Run Text=".NET WPF"/>
+                    <LineBreak/>
+                    <Run Text="EF Core"/>
+                    <LineBreak/>
+                    <Run Text="ADO.NET"/>
+                    <LineBreak/>
+                    <Run Text="SQLite"/>
+                </TextBlock>
+                
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Автори:" FontWeight="SemiBold" Margin="0,10,20,10" VerticalAlignment="Top"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" Margin="0,10" TextWrapping="Wrap">
+                    <Run Text="Anastasiia Tymofieieva"/>
+                    <LineBreak/>
+                    <Run Text="Veronika Peleshchak"/>
+                    <LineBreak/>
+                    <Run Text="Iryna Holembiovska"/>
+                    <LineBreak/>
+                    <Run Text="Taras Andreiko"/>
+                    <LineBreak/>
+                    <Run Text="Vladyslav Lishchynskyi"/>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
+        <Button Grid.Row="2" Content="Закрити" x:Name="CloseButton" Style="{StaticResource PrimaryButton}" Height="40" Width="150" HorizontalAlignment="Center" Margin="20" Click="CloseButton_Click"/>
+    </Grid>
+</Window>

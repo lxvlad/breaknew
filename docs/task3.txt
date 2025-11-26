@@ -1,0 +1,46 @@
+# BreakFree — Task 3: Архітектура БД та ADO.NET консольний інструмент
+
+Це повний репозиторій для **Завдання 3** курсу «Програмна інженерія»: схема БД (ERD + SQL), та **Console App (.NET)**, що підключається через **ADO.NET** до **SQLite**, друкує дані і виконує **сидинг** (≈40 рядків у кожну таблицю).
+
+## Структура
+```
+/docs
+  ERD_BreakFree.jpeg
+  BreakFree_DB_Structure.pdf
+/db
+  create_breakfree.sql
+/src
+  /BreakFree.ConsoleSeed
+    BreakFree.ConsoleSeed.csproj
+    Program.cs
+    SqliteHelper.cs
+    Models.cs
+    Seed.cs
+.gitignore
+README.md
+```
+
+## Технології
+- .NET 8 (Console App)
+- ADO.NET (`Microsoft.Data.Sqlite`)
+- SQLite (локальний файл `breakfree.db`)
+
+## Запуск
+```bash
+cd src/BreakFree.ConsoleSeed
+dotnet restore
+dotnet run
+```
+**Поводження:**
+- якщо `breakfree.db` відсутня → створюється файл і застосовується `/db/create_breakfree.sql`;
+- якщо таблиці порожні → сидинґ (по 40 записів у кожну);
+- виводяться перші 5 рядків з ключових таблиць.
+
+## Налаштування
+- шлях до БД: `src/BreakFree.ConsoleSeed/breakfree.db` (поруч із .exe при запуску);
+- кількість рядків при сидингу: константа `SEED_COUNT` у `Seed.cs`;
+- лог-файли ви можете додати пізніше (для Завдання 6).
+
+## Додатково
+- Схему БД редагуйте в `db/create_breakfree.sql` і перезапускайте програму зі свіжою БД (видаліть `breakfree.db`, щоб створити заново).
+
